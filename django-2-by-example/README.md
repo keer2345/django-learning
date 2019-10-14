@@ -5,3 +5,5 @@
 
 1. [Building a Blog Application](https://github.com/keer2345/django-learning/blob/master/django-2-by-example/ch01.md)
 1. [Enhancing Your Blog with Advanced Features](https://github.com/keer2345/django-learning/blob/master/django-2-by-example/ch02.md)
+1. [Extending Your Blog Application](https://github.com/keer2345/django-learning/blob/master/django-2-by-example/ch03.md)
+1. [Building a Social Website](https://github.com/keer2345/django-learning/blob/master/django-2-by-example/ch04.md)
