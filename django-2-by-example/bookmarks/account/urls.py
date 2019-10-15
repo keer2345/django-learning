@@ -30,4 +30,7 @@ urlpatterns = [
 
     # alternative way to include authentication views
     path('', include('django.contrib.auth.urls')),
+
+    # Register
+    path('register/', views.register, name='register'),
 ]

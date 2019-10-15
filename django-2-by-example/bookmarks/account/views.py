@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from .forms import LoginForm
+from .forms import LoginForm, UserRegistration
 
 
 def user_login(request):
@@ -30,3 +30,20 @@ def user_login(request):
 @login_required
 def dashboard(request):
     return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+
+
+def register(request):
+    if request.method == 'POST':
+        user_form = UserRegistration(request.POST)
+        if user_form.is_valid():
+            # Create a new user object but aviod saving it yet
+            new_user = user_form.save(commit=False)
+            # Set the choosen password
+            new_user.set_password(user_form.cleaned_data['password'])
+            # Save the user
+            new_user.save()
+            return render(request, 'account/register_done.html',
+                          {'new_user': new_user})
+    else:
+        user_form = UserRegistration()
+    return render(request, 'account/register.html', {'user_form': user_form})
