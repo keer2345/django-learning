@@ -145,3 +145,6 @@ EMAIL_HOST_PASSWORD = '123456hui'  # your Password or Authorization code
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'keer2345@163.com'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
