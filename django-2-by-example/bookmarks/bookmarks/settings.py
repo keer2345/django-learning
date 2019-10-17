@@ -24,7 +24,7 @@ SECRET_KEY = 'bl*h(d9vr*zg#+5%f-f4elpbs7&1l5wh4*c2x&av4r%az13v*4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -153,3 +154,7 @@ DEFAULT_FROM_EMAIL = 'keer2345@163.com'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1083756243363-kle126l7vrhjvc81gbdkjnsisbm6vbvm.apps.googleusercontent.com' # Google Consumer Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'AQpb8SN2NVOEoNhzIHMODtHD' # Google Consumer Secret
